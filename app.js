@@ -12,6 +12,11 @@ const app = express();
 app.use(express.json());
 app.use(cookieParser()); 
 
+app.get("/ping", (req, res) => {
+  res.send("pong");
+});
+
+
 app.use('/api/auth', authRoutes);
 app.use("/api/cart", cartRoutes);
 

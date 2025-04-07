@@ -18,15 +18,15 @@ export const Cart = sequelize.define("Cart", {
     },
   },
   testIds: {
-    type: DataTypes.ARRAY(DataTypes.STRING), // Array of test IDs
+    type: DataTypes.JSON,
     allowNull: false,
   },
   testNames: {
-    type: DataTypes.ARRAY(DataTypes.STRING), // Array of test names
+    type: DataTypes.JSON,
     allowNull: false,
   },
   testPrices: {
-    type: DataTypes.ARRAY(DataTypes.FLOAT), // Array of test prices
+    type: DataTypes.JSON, 
     allowNull: false,
   },
   totalPrice: {
